@@ -1,6 +1,66 @@
 # TaskTracker(Python)
-A command-line task tracking application built in Python that allows users to create, view, and update tasks with persistent storage using a local JSON file. The project was designed to strengthen core software engineering skills, including command-line interface design, file system interaction, and structured data management.
+Requirements
 
-The application parses user input via command-line arguments, performs CRUD-style operations on tasks, and maintains task state across executions. Each task includes a unique identifier, status, and creation/update timestamps, demonstrating practical use of data structures and state management without relying on external libraries.
+Python 3 installed
 
-This project emphasizes clean, readable code and incremental feature development, and reflects real-world patterns used in lightweight CLI tools. It serves as a foundation for more advanced applications involving automation, tooling, and backend logic.
+Terminal / Command Prompt
+
+No external libraries required.
+
+Setup
+
+Clone or download this repository
+
+Make sure the project folder contains:
+
+tasktracker.py
+
+tasks.json
+
+If tasks.json does not exist, the program will create it automatically.
+
+How to Use
+
+All commands are run from the terminal in the project directory.
+
+Add a Task
+python tasktracker.py add "Buy groceries"
+
+
+Adds a new task with a unique ID and a default status of todo.
+
+List All Tasks
+python tasktracker.py list
+
+
+Displays all tasks with their ID, status, and description.
+
+Mark a Task as Done
+python tasktracker.py mark-done 1
+
+
+Marks the task with ID 1 as completed.
+
+Task Format
+
+Each task is stored with the following fields:
+
+id – unique task identifier
+
+description – task description
+
+status – todo or done
+
+createdAt – timestamp when the task was created
+
+updatedAt – timestamp of the last update
+
+All data is saved locally in tasks.json.
+
+Notes
+
+Descriptions containing spaces must be wrapped in quotes
+
+Commands must be run from the directory containing tasktracker.py
+
+Task data persists between runs
